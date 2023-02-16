@@ -25,12 +25,16 @@ dans lequel vous trouverez nos échanges au format .eml
 - Je n'ai pas réussi à retrouver la capsule vidéo mais elle a bien été envoyée à ma professeure de communication.
 
 Améliorations que je pourrais apporter / Ce qui n'a pas été finalisé : 
-- Finaliser le projet
+- Finaliser le prototype (certaines pages n'ont pas été réalisées ou finalisées)
 - Améliorer mes maquettes et personas
 
 SAE S1.05 - Recueil de besoins
+s
 Compétence 5 : Identifier les besoins métiers des clients et des utilisateurs
+
 Apprentissages critiques : 
+
 AC 1 Appréhender les besoins du client et de l'utilisateur
+
 AC 3 Identifier les acteurs et les différentes phases d'un
 cycle de développement
