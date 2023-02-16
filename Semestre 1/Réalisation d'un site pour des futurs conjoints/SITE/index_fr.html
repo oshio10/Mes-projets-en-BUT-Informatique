@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title>Page d'accueil</title>
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+    <meta charset="UTF-8" />
+
+    <!-- un lien vers un fichier CSS tout prêt -->
+    <link href = "css/bootstrap.min.css" rel = "stylesheet">
+    <!-- un lien vers un fichier CSS pour les icônes -->
+    <link href = "css/bootstrap-icons.css" rel = "stylesheet">
+    <!-- un lien vers un fichier CSS pour mes modifications personnelles -->
+    <link href = "css/local.css" rel = "stylesheet">
+    <!-- un lien vers des fichiers JS pour rajouter des comportements dynamiques au site -->
+    <script src = "js/local.js"></script>
+
+  </head>
+
+  <body>
+
+  <!-- Up Button-->
+  <button
+        type="button"
+        class="btn btn-floating btn-lg"
+        id="btn-back-to-top"
+        >
+  <i class="fas fa-arrow-up"></i>
+</button>
+ 
+  <!-- Navbar-->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar_hidden" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar_hidden">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0"> <!-- mb-2 : marge inférieure -->
+            <li class="nav-item">
+              <a class="nav-link active" id="texte" aria-current="page" href="index_fr.html">Accueil</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="texte" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Rubriques
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" id="texte" href="contact.html">Contact</a></li>
+                <li><a class="dropdown-item" id="texte" href="form_fr.html">Formulaire</a></li>
+                <li><a class="dropdown-item" id="texte" href="ie.html">Informations Essentielles</a></li>
+                <li><a class="dropdown-item" id="texte" href="lieux.html">Lieux</a></li>
+                <li><a class="dropdown-item" id="texte" href="photos.html">Photos</a></li>
+                <li><a class="dropdown-item" id="texte" href="planning_fr.html">Planning</a></li>
+                <li><a class="dropdown-item" id="texte" href="tradition.html">Tradition</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex" method="get">
+            <input name="recherche" class="form-control me-2" type="search" placeholder="Tapez ici votre recherche" aria-label="Recherche">
+            <button class="btn btn-outline-success" type="submit">Rechercher</button>
+          </form>
+        </div>
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index_en.html">
+              <img height=64px src="images/anglais.png"/>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  <!-- Fil d'Ariane -->
+  <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="index_fr.html">Page d'accueil</a></li>
+    </ol>
+  </nav>
+  <!-- Message d'accueil-->
+    <div class="container-fluid main-gradient">
+      <div class="accueil p-5 rounded-3 m-3">
+        <h1 class="display-2"><strong> Bienvenue sur le site du mariage de Rayan et Gwen&nbsp;!</strong></h1>
+        <hr class="my-3" /> <!-- my-4 : marge verticale -->
+        <p id="texte" class="text-center">Vous trouverez toutes les informations nécessaires dans les différentes rubriques du site</p>
+      </div>
+    </div>
+    <!-- Section aide-->
+    <div class="accordion main-gradient" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" id="texte" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Aide à la navigation / Navigation help
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+          <div class="accordion-body" id="texte">
+            Pour changer de langue, choissisez le drapeau en haut à droite.
+            Si vous pensez être perdu, vous pouvez rechercher une rubrique particulière on la tapant sur la barre de recherche comme si vous faisiez une recherche sur Google.
+            La barre de recherche se trouve à côté du drapeau en haut à droite.
+            Dans la rubrique Informations Essentielles, vous aurez des descriptions de chaque rubrique pour facilement vous y retrouver.
+            <hr/>
+            In order to change the language, choose the flag at the top-right.
+            If you feel lost, you can search a particular section by typing his name in the search box the same way you do a Google search.
+            The search bar is next to the language flag at the top-right.
+            In the section "Essential Information", you will get a description of each section in order to find what you are looking for.
+          </div>
+        </div>
+      </div>
+    <br/>
+
+  
+  <!-- main-gradient-->
+
+    <div class="container-fluid main-gradient">
+      <div class="row">
+        <div class="col-4">
+          <img src="images/fleur-main.jpg" class="img-thumbnail" alt="IUT de Villetaneuse (photo hivernale)" />
+        </div>
+        <div class="col-8">
+        </div>
+        <div class="col-8">
+        </div>
+        <div class="col-4">
+          <img src="images/fleur-main2.jpg" class="img-thumbnail" alt="IUT de Villetaneuse (photo hivernale)" />
+        </div>
+      </div>
+
+    </div>
+    <!-- Cartes -->
+  <hr/>
+  <hr/>
+  <div class="container">
+    <h2 class="text-center">Présentation des futurs mariés</h2>
+    <div class="fiches row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xxl-6">
+      <div class="col-1">
+        <img src="images/rugby.png" class="img-thumbnail" alt="IUT de Villetaneuse (photo hivernale)" />
+      </div>
+      <div class="col card">
+        <img src="images/rayan.png" class="card-img-top" alt="BUT CJ">
+        <div class="card-body">
+          <h5 class="card-title">Rayan Chabane</h5>
+          <ul>
+            <li>
+              Etudiant en Staps
+            </li>
+            <li>
+              Fait parti d'une équipe de rugby universitaire 
+              <ul>
+                <li>
+                Allier droit
+                </li>
+              </ul>
+            </li>
+            <li>
+              A son BAFA
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col card">
+        <img src="images/gwen.png" class="card-img-top" alt="BUT GEA">
+        <div class="card-body">
+          <h5 class="card-title">Gwen Taylor</h5>
+          <ul>
+            <li>
+              Lives in Paris / Vis à Paris
+            </li>
+            <li>
+              In the troupe of Opéra de Paris /Dans la troupe de l'Opéra de Paris 
+              <li>
+                première danseuse 
+              </li>
+            </li>
+            <li>
+              Get the prime role in the next season in the forthcoming representation of Lohengrin / A le premier rôle dans la prochaine saison à venir de la représentation de Lohengrin
+            </li>
+          </ul>
+        </div>
+      </div>
+       <div class="col-3">
+         <img src="images/premiere danseuse.jpg" class="img-thumbnail" alt="IUT de Villetaneuse (photo hivernale)" />
+       </div>
+      </div>
+    </div>
+    <hr/>
+    <hr/>
+      <div class="row">
+        <div class="col text-center">
+          <img height=484px width=95% src="images/fleur-main3.jpg" class="text-center" alt="IUT de Villetaneuse (photo hivernale)" />
+        </div>
+      </div>
+
+  </div>
+</div>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+
+<script src = "js/bootstrap.min.js"></script>
+
+</body>
+</html>

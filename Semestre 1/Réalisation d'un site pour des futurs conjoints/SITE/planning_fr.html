@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title>Planning</title>
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+    <meta charset="UTF-8" />
+
+    <!-- un lien vers un fichier CSS tout prêt -->
+    <link href = "css/bootstrap.min.css" rel = "stylesheet">
+    <!-- un lien vers un fichier CSS pour les icônes -->
+    <link href = "css/bootstrap-icons.css" rel = "stylesheet">
+    <!-- un lien vers un fichier CSS pour mes modifications personnelles -->
+    <link href = "css/local.css" rel = "stylesheet">
+    <!-- un lien vers des fichiers JS pour rajouter des comportements dynamiques au site -->
+    <script src = "js/local.js"></script>
+
+  </head>
+
+  <body>
+
+  <!-- Up Button-->
+  <button
+        type="button"
+        class="btn btn-floating btn-lg"
+        id="btn-back-to-top"
+        >
+  <i class="fas fa-arrow-up"></i>
+</button>
+ 
+  <!-- Navbar-->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar_hidden" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar_hidden">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0"> <!-- mb-2 : marge inférieure -->
+            <li class="nav-item">
+              <a class="nav-link active" id="texte" aria-current="page" href="index_fr.html">Accueil</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="texte" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Rubriques
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" id="texte" href="contact.html">Contact</a></li>
+                <li><a class="dropdown-item" id="texte" href="form_fr.html">Formulaire</a></li>
+                <li><a class="dropdown-item" id="texte" href="ie.html">Informations Essentielles</a></li>
+                <li><a class="dropdown-item" id="texte" href="lieux.html">Lieux</a></li>
+                <li><a class="dropdown-item" id="texte" href="photos.html">Photos</a></li>
+                <li><a class="dropdown-item" id="texte" href="planning_fr.html">Planning</a></li>
+                <li><a class="dropdown-item" id="texte" href="tradition.html">Tradition</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex" method="get">
+            <input name="recherche" class="form-control me-2" type="search" placeholder="Tapez ici votre recherche" aria-label="Recherche">
+            <button class="btn btn-outline-success" type="submit">Rechercher</button>
+          </form>
+        </div>
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="planning_en.html">
+              <img height=64px src="images/anglais.png"/>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  <!-- Fil d'Ariane -->
+
+  <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="index_fr.html">Page d'accueil</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Planning</li>
+    </ol>
+  </nav>
+  <!-- Message d'accueil-->
+    <div class="container-fluid planning-gradient">
+      <div class="accueil p-5 rounded-3 m-3">
+        <h1 class="display-2"><strong> Bienvenue sur le site du mariage de Rayan et Gwen&nbsp;!</strong></h1>
+        <hr class="my-3" /> <!-- my-4 : marge verticale -->
+        <p id="texte" class="text-center">Vous trouverez toutes les informations nécessaires dans les différentes rubriques du site</p>
+      </div>
+    </div>
+    <!-- Section aide-->
+    <div class="accordion planning-gradient" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" id="texte" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Aide à la navigation / Navigation help
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+          <div class="accordion-body" id="texte">
+            Pour changer de langue, choissisez le drapeau en haut à droite.
+            Si vous pensez être perdu, vous pouvez rechercher une rubrique particulière on la tapant sur la barre de recherche comme si vous faisiez une recherche sur Google.
+            La barre de recherche se trouve à côté du drapeau en haut à droite.
+            Dans la rubrique Informations Essentielles, vous aurez des descriptions de chaque rubrique pour facilement vous y retrouver.
+            <hr/>
+            In order to change the language, choose the flag at the top-right.
+            If you feel lost, you can search a particular section by typing his name in the search box the same way you do a Google search.
+            The search bar is next to the language flag at the top-right.
+            In the section "Essential Information", you will get a description of each section in order to find what you are looking for.
+          </div>
+        </div>
+      </div>
+    <br/>
+
+  
+  <!-- main-gradient-->
+
+    <div class="container-fluid planning-gradien">
+      <div class="row">
+        <div class="col-4">
+          <img src="images/fleur-planning.jpg" class="img-thumbnail" alt="IUT de Villetaneuse (photo hivernale)" />
+        </div>
+        <div class="col-8">
+        </div>
+        <div class="col-8">
+        </div>
+        <div class="col-4">
+          <img src="images/fleur-planning2.jpg" class="img-thumbnail" alt="IUT de Villetaneuse (photo hivernale)" />
+        </div>
+      </div>
+
+    </div>
+  <hr/>
+  <hr/>
+  <div class="container-md planning-gradien">
+    <div class="row">
+      <div class="col-4">
+      </div>
+      <div class="col-6">
+        <ul>
+          <li>10 h 15 : rassemblement des troupes</li>
+          <li>11 h - 12 h 30 : union civile à la mairie + retrouvailles et félicitations</li>
+          <li>12 h 30 - 13 h 45 : repas du midi</li>
+          <li>14 h  - 14 h 45 : photographies dans le parc du Val-de-Marne</li>
+          <li>15 h : cérémonie à la Mosquée Sahaba</li>
+          <li>19 h : début de la fête</li>
+          <li>20h : repas et discours et/ou surprises des invités</li>
+          <li>Après le repas : soirée dansante</li>
+        </ul>
+      </div>
+      <div class="col-2">
+      </div>
+      </div>
+  </div>
+
+
+
+      <div class="row">
+        <div class="col text-center">
+          <img height=484px width=95% src="images/fleur-planning3.jpg" class="text-center" alt="IUT de Villetaneuse (photo hivernale)" />
+        </div>
+      </div>
+
+  </div>
+</div>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+
+<script src = "js/bootstrap.min.js"></script>
+
+</body>
+</html>
