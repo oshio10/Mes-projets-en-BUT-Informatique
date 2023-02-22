@@ -1,0 +1,206 @@
+/* Style des onglets */
+.admin body {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+a {
+  color: #7baed1;
+  text-decoration: none;
+}
+
+.admin,
+.client {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  padding: 50px 5px 5px;
+  box-sizing: border-box;
+  background-color: #f5f5f5;
+}
+
+#tabs {
+  display: flex;
+  border-bottom: 4px solid;
+  background-color: #75a58c;
+  color: #fff;
+}
+
+.tablink {
+  flex: 1;
+  text-align: center;
+  padding: 13px 0;
+  cursor: pointer;
+  border-right: 1px solid;
+  border: 1px solid #fff;
+  background-color: #75a58c;
+  color: #fff;
+}
+
+h2 {
+  color: #75a58c;
+  font-size: medium;
+  text-align: center;
+}
+h3 {
+  text-align: center;
+  color: #75a58c;
+  text-decoration: underline;
+}
+.client th {
+  text-align: center;
+  color: #7baed1;
+  border: #7baed1 double;
+  height: 47px;
+  font-weight: 100px;
+}
+.tablink:focus {
+  background-color: #7baed1;
+}
+td {
+  text-align: center;
+  border: #7baed1 double;
+  table-layout: fixed;
+  width: 1000px;
+}
+
+.bouton {
+  position: relative;
+  background-color: #75a58c;
+  color: #fff;
+  height: 30px;
+  width: 94px;
+  text-align: center;
+  line-height: normal;
+}
+h5 {
+  color: #75a58c;
+  font-family: cambria;
+  text-align: right;
+}
+li {
+  text-align: left;
+  color: #7baed1;
+  font-size: 17px;
+}
+#Inventaire,
+#Trésorerie,
+#fidelite {
+  display: none;
+}
+.fid {
+  display: flex;
+  flex-direction: column;
+  border-width: 2px;
+  border-style: double;
+  border-color: #75a58c;
+  color: #75a58c;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  width: 100%;
+  align-content: space-around;
+  align-items: center;
+}
+#paiement {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 5px 5px 5px;
+}
+.infopayement {
+  display: flex;
+  flex-direction: column;
+  border-width: 2px;
+  border-style: double;
+  border-color: #75a58c;
+  width: 50%;
+}
+.panier {
+  border-width: 2px;
+  border-style: double;
+  border-color: #75a58c;
+  top: 0px;
+  float: right;
+  width: 50%;
+}
+.bouton,
+.formpaiement label {
+  display: block;
+  margin: 25px auto 0;
+  text-align: center;
+}
+.bouton input {
+  display: block;
+  text-align: center;
+  margin: 25px auto 0;
+}
+
+.del td {
+  color: crimson;
+}
+.plus-button {
+  outline: none;
+  border: none;
+  width: 40px;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 5px 10px;
+  background-color: darkseagreen;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.delete-button {
+  outline: none;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 5px 10px;
+  background-color: crimson;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.tabcontent {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+#paiement{
+  flex-direction: row;
+}
+
+
+.ajouter-form h1 {
+  font-size: 24px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.ajouter-form form {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.ajouter-form form .data-container{
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  padding: 10px 20px;
+  gap: 15px;
+}
+
+.ajouter-form form .data-container .data {
+  display: flex;
+  flex-direction: column;
+}
+
+.ajouter-form form button{
+  outline: none;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 5px 10px;
+  background-color: darkseagreen;
+  cursor: pointer;
+  border-radius: 3px;
+}
