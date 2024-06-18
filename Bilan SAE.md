@@ -16,21 +16,29 @@ Explication des fonctions principales : description des types de paramètres d'e
 Code en PHP : exemples de contrôleurs et fonctions dans le modèle (Model).
 UML : diagrammes des contrôleurs du modèle MVC.
 Vérification de la qualité par les tests : mise en place et exécution de tests pour vérifier la robustesse et la qualité du code.
+####
+
 **Compétence 2 : Optimisation**
 SAE1 : Choix d’utilisation de l’architecture MVC
 Justification : présentation des avantages en termes de maintenance, évolutivité et séparation des préoccupations.
 Utilisation des algorithmes adaptés : choix et implémentation d’algorithmes optimisés pour les performances.
 Sécurisation : compréhension et application des principes de sécurisation du code et des données.
 Évaluation de l’impact : analyse de l’impact des solutions développées sur les performances et la sécurité.
+####
+
 **Compétence 3 : Réseau**
 SAE1 : Contrôle sur le CAS (Central Authentication Service)
 Mise en œuvre : configuration et gestion du CAS pour sécuriser les accès.
 Sécurisation du système : mise en place de protocoles et méthodes pour protéger les échanges et les données.
+####
+
 **Compétence 4 : Base de données**
 SAE1 : Principales requêtes sur la base de données
 Bilan technique : analyse du fonctionnement des tables, des attributs et de leur utilité.
 Optimisation des modèles de données : amélioration des structures de données pour optimiser les performances.
 Confidentialité des données : mise en place de mesures pour assurer la confidentialité et l'intégrité des données.
+####
+
 **Compétence 5 : Suivi du projet**
 SAE1 : User story et UML des cas d’utilisation
 User story : compréhension des besoins clients et futurs utilisateurs.
@@ -39,6 +47,8 @@ Gantt et PERT : gestion du temps et des tâches avec des outils de planification
 Formalisation des besoins : élaboration de documents de spécifications.
 Faisabilité : analyse et évaluation de la faisabilité des projets.
 Mise en œuvre du suivi : utilisation d’outils et de méthodes pour suivre l’avancement des projets.
+####
+
 **Compétence 6 : Communication**
 SAE1 : Réunions programmées
 Organisation : planification de réunions avec l’accord de tous les membres de l’équipe.
