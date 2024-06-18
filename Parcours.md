@@ -1,5 +1,4 @@
-Parcours
-
+# Parcours
 
 J’ai commencé mon cursus en septembre 2021. Dès la première année, j’ai pu réaliser différents projets en utilisant divers langages informatiques tels que Python, Java, HTML/CSS/JS, etc. Ces expériences m'ont permis de développer des compétences techniques solides et de découvrir ma passion pour la programmation.
 
