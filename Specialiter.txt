@@ -1,7 +1,7 @@
-Specialiter 
+# Specialiter 
 
 
-je vais vous presenter 2 specialiter points :
+## je vais vous presenter 2 specialiter points :
 
 Développement Web (HTML/CSS/JS)
 Définition, principes, cadre, applications :
