@@ -1,0 +1,150 @@
+-- Script pour créer les tables avec l'auto-incrémentation sur les colonnes d'ID
+CREATE TABLE IF NOT EXISTS PERSONNE (
+    id_personne SERIAL PRIMARY KEY,
+    nom VARCHAR(50),
+    prenom VARCHAR(50),
+    mail VARCHAR(80),
+    motDePasse VARCHAR(20),
+    telephone INT
+);
+
+CREATE TABLE IF NOT EXISTS PRESTATAIRE(
+    id_personne SERIAL PRIMARY KEY,
+    FOREIGN KEY(id_personne) REFERENCES PERSONNE(id_personne)
+);
+
+CREATE TABLE IF NOT EXISTS INTERLOCUTEUR(
+    id_personne SERIAL PRIMARY KEY,
+    FOREIGN KEY(id_personne) REFERENCES PERSONNE(id_personne)
+);
+
+CREATE TABLE IF NOT EXISTS CLIENT(
+    id_client SERIAL PRIMARY KEY,
+    nomClient VARCHAR(50),
+    telClient INT
+);
+
+CREATE TABLE IF NOT EXISTS LOCALITE(
+    idLocalite SERIAL PRIMARY KEY,
+    cp CHAR(5),
+    ville VARCHAR(50)
+);
+
+CREATE TABLE IF NOT EXISTS TypeVoie(
+    id SERIAL PRIMARY KEY,
+    libelle VARCHAR(20)
+);
+
+CREATE TABLE IF NOT EXISTS COMMERCIAL(
+    id_personne SERIAL PRIMARY KEY,
+    FOREIGN KEY(id_personne) REFERENCES PERSONNE(id_personne)
+);
+
+CREATE TABLE IF NOT EXISTS TYPE(
+    idType SERIAL PRIMARY KEY,
+    libelle VARCHAR(50)
+);
+
+CREATE TABLE IF NOT EXISTS GESTIONNAIRE(
+    id_personne SERIAL PRIMARY KEY,
+    FOREIGN KEY(id_personne) REFERENCES PERSONNE(id_personne)
+);
+
+CREATE TABLE IF NOT EXISTS ADRESSE(
+    id_adresse SERIAL PRIMARY KEY,
+    numero INT,
+    nomVoie VARCHAR(50),
+    id SERIAL,
+    idLocalite SERIAL,
+    FOREIGN KEY(id) REFERENCES TypeVoie(id),
+    FOREIGN KEY(idLocalite) REFERENCES LOCALITE(idLocalite)
+);
+
+CREATE TABLE IF NOT EXISTS COMPOSANTE(
+    id_composante SERIAL PRIMARY KEY,
+    nomComposante VARCHAR(50),
+    id_client SERIAL,
+    id_adresse SERIAL,
+    FOREIGN KEY(id_client) REFERENCES CLIENT(id_client),
+    FOREIGN KEY(id_adresse) REFERENCES ADRESSE(id_adresse)
+);
+
+CREATE TABLE IF NOT EXISTS BDL(
+    id_composante SERIAL,
+    id_personne_2 SERIAL,
+    annee SMALLINT,
+    mois INT,
+    signatureInterlocuteur BIGINT,
+    signaturePrestataire VARCHAR(50),
+    commentaire VARCHAR(255),
+    id_personne SERIAL,
+    id_personne_1 SERIAL,
+    PRIMARY KEY(id_composante, id_personne_2, annee, mois),
+    FOREIGN KEY(id_composante) REFERENCES COMPOSANTE(id_composante),
+    FOREIGN KEY(id_personne_2) REFERENCES PRESTATAIRE(id_personne),
+    FOREIGN KEY(id_personne) REFERENCES GESTIONNAIRE(id_personne),
+    FOREIGN KEY(id_personne_1) REFERENCES INTERLOCUTEUR(id_personne)
+);
+
+CREATE TABLE IF NOT EXISTS PERIODE(
+    id_composante SERIAL,
+    id_personne SERIAL,
+    annee SMALLINT,
+    mois INT,
+    jourDuMois INT,
+    PRIMARY KEY(id_composante, id_personne, annee, mois, jourDuMois),
+    FOREIGN KEY(id_composante, id_personne, annee, mois) REFERENCES BDL(id_composante, id_personne_2, annee, mois)
+);
+
+CREATE TABLE IF NOT EXISTS CRENEAU(
+    Numero SERIAL PRIMARY KEY,
+    heure_arrivee VARCHAR(50),
+    heure_depart VARCHAR(50),
+    id_composante SERIAL,
+    id_personne SERIAL,
+    annee SMALLINT,
+    mois INT,
+    jourDuMois INT,
+    UNIQUE(jourDuMois),
+    FOREIGN KEY(id_composante, id_personne, annee, mois, jourDuMois) REFERENCES PERIODE(id_composante, id_personne, annee, mois, jourDuMois)
+);
+
+CREATE TABLE IF NOT EXISTS JOURNEE(
+    id_composante SERIAL,
+    id_personne SERIAL,
+    annee SMALLINT,
+    mois INT,
+    jourDuMois INT,
+    PRIMARY KEY(id_composante, id_personne, annee, mois, jourDuMois),
+    FOREIGN KEY(id_composante, id_personne, annee, mois, jourDuMois) REFERENCES PERIODE(id_composante, id_personne, annee, mois, jourDuMois)
+);
+
+CREATE TABLE IF NOT EXISTS id(
+    idType SERIAL,
+    Id_DEMIJOURNEE SERIAL,
+    id_composante SERIAL,
+    id_personne SERIAL,
+    annee SMALLINT,
+    mois INT,
+    jourDuMois INT,
+    PRIMARY KEY(idType, Id_DEMIJOURNEE),
+    UNIQUE(jourDuMois),
+    FOREIGN KEY(idType) REFERENCES TYPE(idType),
+    FOREIGN KEY(id_composante, id_personne, annee, mois, jourDuMois) REFERENCES PERIODE(id_composante, id_personne, annee, mois, jourDuMois)
+);
+
+CREATE TABLE IF NOT EXISTS REPRESENTE(
+    id_personne SERIAL,
+    id_composante SERIAL,
+    PRIMARY KEY(id_personne, id_composante),
+    FOREIGN KEY(id_personne) REFERENCES INTERLOCUTEUR(id_personne),
+    FOREIGN KEY(id_composante) REFERENCES COMPOSANTE(id_composante)
+);
+
+CREATE TABLE IF NOT EXISTS AFFECTE(
+    id_composante SERIAL,
+    id_personne SERIAL,
+    PRIMARY KEY(id_composante, id_personne),
+    FOREIGN KEY(id_composante) REFERENCES COMPOSANTE(id_composante),
+    FOREIGN KEY(id_personne) REFERENCES COMMERCIAL(id_personne)
+);
